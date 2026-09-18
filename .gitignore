@@ -1,8 +1,48 @@
-# Byte-compiled / optimized / DLL files
+# ==============================================================================
+# Git Ignore — CNIBE & Passport Reader
+# Protection de la confidentialité, des données biométriques et de l'environnement
+# ==============================================================================
+
+# ------------------------------------------------------------------------------
+# 1. DONNÉES BIOMÉTRIQUES & PERSONNELLES SENSIBLES (Protection RGPD / Loi 18-07)
+# ------------------------------------------------------------------------------
+# Caches de jetons d'authentification et cartes lues
+tokens_cache.json
+**/tokens_cache.json
+!tokens_cache.example.json
+
+# Données d'historique de scan locales / tests
+test_saved_cards.json
+**/test_saved_cards.json
+*.jsonl
+
+# Fichiers d'export biométriques (Photos et Signatures)
+photo*.*
+signature*.*
+*.jp2
+
+# Fichiers de logs pouvant contenir des traces APDU / MRZ réelles
+*.log
+logs/
+**/logs/
+
+# ------------------------------------------------------------------------------
+# 2. LOGICIELS ET PACKAGES TIERS PROPRIÉTAIRES
+# ------------------------------------------------------------------------------
+# Installeur propriétaire officiel (à télécharger depuis sa source officielle)
+*.msi
+*.exe
+
+# ------------------------------------------------------------------------------
+# 3. PYTHON (Compilations, Cache & Environnements)
+# ------------------------------------------------------------------------------
 __pycache__/
 *.py[cod]
 *$py.class
 *.so
+build/
+dist/
+*.egg-info/
 
 # Environnements virtuels
 .venv/
@@ -10,35 +50,32 @@ venv/
 env/
 ENV/
 
-# Données biométriques et personnelles sensibles (Protection RGPD / Confidentialité)
-# JAMAIS PUBLIER : jetons crypto, MRZ, photos, signatures, NIN
-tokens_cache.json
-**/tokens_cache.json
-# Installeur propriétaire officiel (redistribution interdite) :
-# télécharger depuis la source officielle, ne pas commiter
-*.msi
-local/DzaEidCard.msi
-photo*.jpg
-photo*.png
-photo*.jp2
-photo*.*
-signature*.jpg
-signature*.png
-signature*.jp2
-signature*.*
-test_saved_cards.json
-serveur/test_saved_cards.json
-*.log
+# ------------------------------------------------------------------------------
+# 4. ÉDITEURS, IDE & EXTENSIONS IA
+# ------------------------------------------------------------------------------
+.vscode/*
+!.vscode/settings.json
+!.vscode/launch.json
+.idea/
+*.sublime-project
+*.sublime-workspace
+.kilo/
+.agent/
+.agents/
 
-# Fichiers temporaires / backups
-org.py
-*.bak
-*.tmp
-
-# Fichiers système et extensions
+# ------------------------------------------------------------------------------
+# 5. FICHIERS SYSTÈME & TEMPORAIRES (Windows / macOS / Linux)
+# ------------------------------------------------------------------------------
 Thumbs.db
 ehthumbs.db
 Desktop.ini
 $RECYCLE.BIN/
 .DS_Store
-.kilo/
+
+# Fichiers temporaires & éditeurs
+*.bak
+*.tmp
+*~
+*.swp
+*.swo
+org.py

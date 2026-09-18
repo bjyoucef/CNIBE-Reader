@@ -35,9 +35,10 @@ org.py
 *.bak
 *.tmp
 
-# Fichiers système
+# Fichiers système et extensions
 Thumbs.db
 ehthumbs.db
 Desktop.ini
 $RECYCLE.BIN/
 .DS_Store
+.kilo/

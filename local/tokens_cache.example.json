@@ -1,0 +1,4 @@
+{
+  "_comment": "EXEMPLE - structure du cache local des jetons. Ne jamais commiter le vrai tokens_cache.json (données personnelles + jetons crypto). Copiez ce fichier vers tokens_cache.json pour un usage local.",
+  "XXXXXXXXX": "MRZ_EXEMPLE|JETON_CRYPTO_EXEMPLE"
+}

@@ -1,0 +1,43 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Environnements virtuels
+.venv/
+venv/
+env/
+ENV/
+
+# Données biométriques et personnelles sensibles (Protection RGPD / Confidentialité)
+# JAMAIS PUBLIER : jetons crypto, MRZ, photos, signatures, NIN
+tokens_cache.json
+**/tokens_cache.json
+# Installeur propriétaire officiel (redistribution interdite) :
+# télécharger depuis la source officielle, ne pas commiter
+*.msi
+local/DzaEidCard.msi
+photo*.jpg
+photo*.png
+photo*.jp2
+photo*.*
+signature*.jpg
+signature*.png
+signature*.jp2
+signature*.*
+test_saved_cards.json
+serveur/test_saved_cards.json
+*.log
+
+# Fichiers temporaires / backups
+org.py
+*.bak
+*.tmp
+
+# Fichiers système
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+.DS_Store

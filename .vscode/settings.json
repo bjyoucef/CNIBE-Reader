@@ -1,0 +1,5 @@
+{
+    "djlint.showInstallError": false,
+    "python.defaultInterpreterPath": "python",
+    "python.terminal.activateEnvironment": true
+}
